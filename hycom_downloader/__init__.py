@@ -41,7 +41,7 @@ def get_url_list(from_date, to_date):
     return to_be_downloaded
 
 def download(data_set_url, lat, lon, requested_cols=None):
-    print(f"Downloading {data_set_url}...")
+    print(f"Downloading {data_set_url}...\n")
     data = xr.open_dataset(data_set_url, 
                                decode_times=False, 
                                 decode_cf=False)
@@ -52,7 +52,7 @@ def download(data_set_url, lat, lon, requested_cols=None):
 
 def download_all(url_list, lat, lon, requested_cols=None):
     download_lat_lon = partial(download, lat=lat, lon=lon, requested_cols=requested_cols)
-    pool = Pool(7)
+    pool = Pool(multiprocessing.cpu_count()-1)
     list_data = pool.map(download_lat_lon, url_list)
     pool.close()                           
     return pd.concat(list_data)
