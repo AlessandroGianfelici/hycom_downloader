@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='hycom_downloader',
-      version='0.1.0',
+      version='0.1.1',
       description='Script to download simulation data from HYCOM.org',
       url='https://github.com/AlessandroGianfelici/hycom_downloader',
       author='Alessandro Gianfelici',
