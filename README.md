@@ -12,7 +12,7 @@ pip install git+https://github.com/AlessandroGianfelici/hycom_downloader.git
 
 ## Usage
 
-The $download_data$ function is intended as the main interface between the user and the library. 
+The "download_data" function is intended as the main interface between the user and the library. 
 It takes as input the initial and final dates of the desired time range, the geographical coordinates of the requested point and (optionally)
 the list of the feature to be downloaded, if you don't need the full dataset. 
 
