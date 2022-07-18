@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jun 15 20:32:00 2022
+@author: alessandro gianfelici
+"""
+
 from datetime import datetime
 import multiprocessing
 import warnings
