@@ -10,7 +10,7 @@ import warnings
 from functools import partial, reduce
 from multiprocessing.dummy import Pool
 from operator import add
-
+import logging
 import pandas as pd
 import requests
 import xarray as xr
@@ -115,9 +115,12 @@ def download(data_set_url: str, lat: float, lon: float, requested_cols=None) -> 
         pd.DataFrame: data for the specified location
     """
     print(f"Downloading {data_set_url}...\n")
-    data = xr.open_dataset(data_set_url,
-                           decode_times=False,
-                           decode_cf=False)
+    try:
+        data = xr.open_dataset(data_set_url,
+                               decode_times=False,
+                               decode_cf=False)
+    except:
+        logging.warning(f"File {data_set_url} not found, skipping")
     if requested_cols is not None:
         return data[requested_cols].sel(lat=lat, lon=lon, method="nearest").to_dataframe()
     else:

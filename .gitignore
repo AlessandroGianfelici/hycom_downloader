@@ -1,3 +1,5 @@
 .ipynb_checkpoints
 *.ipynb
 *__pycache__*
+hycom_downloader.egg-info
+hycom_downloader.egg-info/*
