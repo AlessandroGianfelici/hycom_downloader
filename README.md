@@ -1,6 +1,6 @@
 # Hycom downloader
 
-This package provides a simple and user-friendly interface to download current data from HYCOM's GLBv0.08 expt_53.X database.
+This package provides a simple and user-friendly interface to download data from HYCOM's GLBv0.08 expt_53.X database.
 
 ## Installation
 
