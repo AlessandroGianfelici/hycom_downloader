@@ -51,4 +51,4 @@ Feel free to fork this repository, modify the code and open any needed pull requ
 
 ## Licence
 
-This repository has a MIT Licence
+This repository has a MIT License.
