@@ -121,6 +121,7 @@ def download(data_set_url: str, lat: float, lon: float, requested_cols=None) -> 
                                decode_cf=False)
     except:
         logging.warning(f"File {data_set_url} not found, skipping")
+        return pd.DataFrame()
     if requested_cols is not None:
         return data[requested_cols].sel(lat=lat, lon=lon, method="nearest").to_dataframe()
     else:
