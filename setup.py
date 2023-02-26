@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(name='hycom_downloader',
-      version='0.1.4',
+      version='0.1.5',
       description='Script to download simulation data from HYCOM.org',
       url='https://github.com/AlessandroGianfelici/hycom_downloader',
       author='Alessandro Gianfelici',
@@ -14,6 +14,7 @@ setup(name='hycom_downloader',
           'beautifulsoup4',
           'requests',
           'xarray',
-          'toolz'
+          'toolz',
+          'netCDF4'
       ],
       zip_safe=False)
