@@ -119,8 +119,8 @@ def download(data_set_url: str, lat: float, lon: float, requested_cols=None) -> 
         data = xr.open_dataset(data_set_url,
                                decode_times=False,
                                decode_cf=False)
-    except:
-        logging.warning(f"File {data_set_url} not found, skipping")
+    except Exception as e:
+        logging.warning(f"File {data_set_url} skipped (error {e}, {e.__doc__}")
         return pd.DataFrame()
     if requested_cols is not None:
         return data[requested_cols].sel(lat=lat, lon=lon, method="nearest").to_dataframe()
