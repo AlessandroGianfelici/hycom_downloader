@@ -55,3 +55,5 @@ This repository has a MIT License.
 
 ## Support
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J4EYIF5)
+[![satispay](https://web.satispay.com/_next/static/media/logo.e6c6a08b.svg)](https://web.satispay.com/download/qrcode/S6Y-CON--CC435706-CFC9-43EA-89B4-D99818706BA1?locale=it)
+
